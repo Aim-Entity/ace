@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block head %}
+  <title>Project</title>
+  <link rel="stylesheet" href="{% static 'project/project.css' %}">
+  {% endblock %}
+</head>
+<body>
+  {% block content %}
+  <div class="container">
+    <div class="s1">
+      <h2 class="s1-title default-colour">Projects</h2>
+
+      <!-- Project 1 -->
+      {% for project in projects %}
+      <div class="project">
+        <div class="p-left">
+          <p class="project-type default-colour">{{ project.name }}</p>
+
+          <h3 class="project-text default-colour">{{ project.description }}</h3>
+
+          <a href="{{ project.link }}" target="__blank"><button class="project-btn default-colour">VIEW PROJECT</button></a>
+
+          <div class="project-tools">
+            <div class="pt">
+              <img src="{{ project.software1.url }}" alt="Tool" class="pt-img default-colour">
+              <p class="pt-name default-colour">{{ project.s1_name }}</p>
+            </div>
+
+            <div class="pt">
+              <img src="{{ project.software2.url }}" alt="Tool" class="pt-img default-colour">
+              <p class="pt-name default-colour">{{ project.s2_name }}</p>
+            </div>
+
+            <div class="pt">
+              <img src="{{ project.software3.url }}" alt="Tool" class="pt-img default-colour">
+              <p class="pt-name default-colour">{{ project.s3_name }}</p>
+            </div>
+          </div>
+        </div>
+
+        <img src="{{ project.image.url }}" alt="Project" class="p-right project-thumbnail">
+      </div>
+      {% endfor %}
+
+      <!-- Project 2 -->
+      <!-- <div class="project">
+        <div class="p-left">
+          <p class="project-type">Construction, Building, 3D Printing, CAD</p>
+          <h3 class="project-text">$40 Million Raised by Mighty Buildings in Series B Funding</h3>
+          <a href=""><button class="project-btn">VIEW PROJECT</button></a>
+          <div class="project-tools">
+            <div class="pt">
+              <img src="{% static 'project/imgs/figma.svg' %}" alt="Tool" class="pt-img">
+              <p class="pt-name">Figma</p>
+            </div>
+            <div class="pt">
+              <img src="{% static 'project/imgs/figma.svg' %}" alt="Tool" class="pt-img">
+              <p class="pt-name">Figma</p>
+            </div>
+            <div class="pt">
+              <img src="{% static 'project/imgs/figma.svg' %}" alt="Tool" class="pt-img">
+              <p class="pt-name">Figma</p>
+            </div>
+          </div>
+        </div>
+        <img src="{% static 'project/imgs/project.svg' %}" alt="Project" class="p-right">
+      </div> -->
+    </div>
+  </div>
+
+  <script src="{% static 'project/project.js' %}"></script>
+  {% endblock %}
+</body>
+</html>
