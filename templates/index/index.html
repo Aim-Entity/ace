@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 {% load static %}
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
@@ -30,7 +31,9 @@
 
 	<!-- Document Title
 	============================================= -->
-	<title>Hosting Demo | Canvas</title>
+	{% block head %}
+		<title>Hosting Demo | Canvas</title>
+	{% endblock %}
 
 </head>
 
@@ -39,48 +42,7 @@
 	<!-- Document Wrapper
 	============================================= -->
 	<div id="wrapper" class="clearfix">
-
-		
-
-		<!-- Header
-		============================================= -->
-		<header id="header" class="full-header transparent-header dark" data-sticky-class="not-dark" data-responsive-class="not-dark">
-			<div id="header-wrap">
-				<div class="container">
-					<div class="header-row">
-
-						<!-- Logo
-						============================================= -->
-						<div id="logo">
-							<a href="index.html" class="standard-logo" data-dark-logo="{% static 'home/images/logo-dark.svg' %}"><img width="180px" src="{% static 'home/images/logo-dark.svg' %}"></a>
-							<a href="index.html" class="retina-logo" data-dark-logo="{% static 'home/images/logo-dark@2x.svg' %}"><img src="{% static 'home/images/logo-dark@2x.svg' %}"></a>
-						</div><!-- #logo end -->
-
-						
-
-						<div id="primary-menu-trigger">
-							<svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
-						</div>
-
-						<!-- Primary Navigation
-						============================================= -->
-						<nav class="primary-menu not-dark with-arrows">
-
-							<ul class="menu-container not-dark">
-								<li class="menu-item current"><a class="menu-link" href="#"><div>Home</div></a></li>
-								
-								<li class="menu-item"><a class="menu-link" href="#"><div>Portfolio</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="#"><div>Contact</div></a></li>
-							</ul>
-
-						</nav><!-- #primary-menu end -->
-
-					</div>
-				</div>
-			</div>
-			<div class="header-wrap-clone"></div>
-		</header><!-- #header end -->
-
+		{% block content %}
 		<!-- Slider
 		============================================= -->
 		<section id="slider" class="slider-element bg-angle include-header">
@@ -233,7 +195,7 @@
 
 						<div class="clear"></div>
 
-						<div class="row mt-5 clearfix">
+						<!-- <div class="row mt-5 clearfix">
 							<div class="col-lg-3 col-sm-6">
 								<h4 class="fw-medium mb-3">Free Includes:</h4>
 								<ul class="iconlist price-compare mb-2">
@@ -287,7 +249,7 @@
 								</ul>
 								<a href="#" class="btn btn-link mt-2 fw-normal color p-0" style="font-size: 14px">All Features &#8250;</a>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 
@@ -380,33 +342,7 @@
 							<h2>The world is your oyster</h2>
 							<p>By having your brand recognized internationally, you can expand your brand’s recognition outside of your home country.</p>
 						</div>
-						<div class="row">
-							<div class="col-lg-5 col-md-6">
-								<div class="heading-block mt-md-3 mt-0">
-									<div class="before-heading color">Be recognised...</div>
-									<h3 class=" nott ls0">16 TBPS Capacity and 140 Data Center Global Network</h3>
-								</div>
-								<div class="row">
-									<div class="col-6">
-										<ul class="iconlist ms-0">
-											<li><img src="{% static 'home/demos/hosting/images/flags/uk.png' %}" alt="Image"><a href="#">United Kingdom</a></li>
-											<li><img src="{% static 'home/demos/hosting/images/flags/us.png' %}" alt="Image"><a href="#">USA</a></li>
-											<li><img src="{% static 'home/demos/hosting/images/flags/br.png' %}" alt="Image"><a href="#">Brazil</a></li>
-											<li><img src="{% static 'home/demos/hosting/images/flags/sa.png' %}" alt="Image"><a href="#">South Africa</a></li>
-											<li><img src="{% static 'home/demos/hosting/images/flags/in.png' %}" alt="Image"><a href="#">India</a></li>
-										</ul>
-									</div>
-									<div class="col-6">
-										<ul class="iconlist ms-0">
-											<li><img src="{% static 'home/demos/hosting/images/flags/si.png' %}" alt="Image"><a href="#">Singapore</a></li>
-											<li><img src="{% static 'home/demos/hosting/images/flags/ja.png' %}" alt="Image"><a href="#">Japan</a></li>
-											<li><img src="{% static 'home/demos/hosting/images/flags/au.png' %}" alt="Image"><a href="#">Australia</a></li>
-											<li><img src="{% static 'home/demos/hosting/images/flags/ca.png' %}" alt="Image"><a href="#">Canada</a></li>
-											<li><a href="#">See More..</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
+						<div class="row" style="justify-content: center;">
 							<div class="col-lg-7 col-md-6">
 								<div id="hotspot-img" class="hotspot-img mt-2 responsive-hotspot-wrap">
 							<img src="{% static 'home/demos/hosting/images/svg/map.png' %}" class="img-responsive" alt="Image">
@@ -611,127 +547,7 @@
 			</div>
 		</section><!-- #content end -->
 
-		<!-- Footer
-		============================================= -->
-		<footer id="footer" class="dark">
-			<div class="container">
-
-				<!-- Footer Widgets
-				============================================= -->
-				<div class="footer-widgets-wrap pb-4 clearfix">
-
-					<div class="row">
-
-						<div class="col-md-4 col-sm-6 mb-0 mb-sm-4 mb-md-0">
-
-							<div class="widget clearfix">
-
-								<h4>About Canvas</h4>
-
-								<p>We believe in Simple, Creative &amp; Flexible Design Standards.</p>
-
-								<div style="background: url('images/world-map.png') no-repeat left center; background-size: auto 100%;">
-									<address>
-										<strong>Headquarters:</strong><br>
-										795 Folsom Ave, Suite 600<br>
-										San Francisco, CA 94107<br>
-									</address>
-									<abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br>
-									<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
-								</div>
-
-							</div>
-
-						</div>
-
-						<div class="col-md-3 col-6 mt-5 mt-sm-0">
-
-							<div class="widget clearfix">
-
-								<h4>Features</h4>
-
-								<ul class="list-unstyled iconlist ms-0">
-									<li><a href="https://codex.wordpress.org/">Documentation</a></li>
-									<li><a href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
-									<li><a href="https://wordpress.org/extend/plugins/">Plugins</a></li>
-									<li><a href="https://wordpress.org/support/">Support Forums</a></li>
-									<li><a href="https://wordpress.org/extend/themes/">Themes</a></li>
-									<li><a href="https://wordpress.org/news/">Canvas Blog</a></li>
-									<li><a href="https://planet.wordpress.org/">Canvas Planet</a></li>
-								</ul>
-
-							</div>
-
-						</div>
-
-						<div class="col-md-3 col-6 mt-5 mt-sm-0">
-
-							<div class="widget clearfix">
-
-								<h4>Social</h4>
-
-								<ul class="list-unstyled iconlist">
-									<li><i class="icon-facebook"></i><a href="https://facebook.com/semicolonweb" target="_blank"> Facebook</a></li>
-									<li><i class="icon-twitter"></i><a href="https://twitter.com/__semicolon" target="_blank"> Twitter</a></li>
-									<li><i class="icon-instagram"></i><a href="https://instagram.com/semicolonweb" target="_blank"> Instagram</a></li>
-									<li><i class="icon-youtube"></i><a href="https://www.youtube.com/user/shank20121/videos" target="_blank"> YouTube</a></li>
-									<li><i class="icon-xing"></i><a href="#"> Xing</a></li>
-									<li><i class="icon-github"></i><a href="#"> Github</a></li>
-								</ul>
-
-							</div>
-
-						</div>
-
-						<div class="col-md-2 col-sm-6 mt-4 mt-sm-0">
-
-							<div class="widget clearfix">
-
-								<h4>Support</h4>
-
-								<ul class="list-unstyled iconlist ms-0">
-									<li><a href="#">Help Center</a></li>
-									<li><a href="#">Paid with Mollie</a></li>
-									<li><a href="#">Status</a></li>
-									<li><a href="#">Changelog</a></li>
-									<li><a href="#">Contact Support</a></li>
-								</ul>
-
-							</div>
-
-						</div>
-
-					</div>
-
-				</div><!-- .footer-widgets-wrap end -->
-
-				<div class="line line-sm m-0"></div>
-
-			</div>
-
-
-			<!-- Copyrights
-			============================================= -->
-			<div id="copyrights" class="bg-transparent">
-				<div class="container clearfix">
-
-					<div class="row justify-content-between col-mb-30">
-						<div class="col-12 col-md-auto text-center text-md-start">
-							Copyrights &copy; 2020 All Rights Reserved by Ace Web Designs.<br>
-							<!-- <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div> -->
-						</div>
-
-						<div class="col-12 col-md-auto text-center text-md-end">
-							<div class="copyrights-menu copyright-links clearfix">
-								<!-- <a href="#">Home</a>/<a href="#">About Us</a>/<a href="#">Team</a>/<a href="#">Clients</a>/<a href="#">FAQs</a>/<a href="#">Contact</a> -->
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div><!-- #copyrights end -->
-		</footer><!-- #footer end -->
-
+	{% endblock %}
 	</div><!-- #wrapper end -->
 
 	<!-- Go To Top
