@@ -67,3 +67,29 @@ button {
   color: #FFFFFF;
 
 }
+
+.secondary-map {
+  display: none;
+}
+
+.primary-map {
+  border:0; width: 620px; height: 210px
+}
+
+@media screen and (max-width: 1200px) {
+  .primary-map {
+    width: 210px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .primary-map, .fluid-width-video-wrapper {
+    display: none;
+  }
+
+  .inner-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+}
