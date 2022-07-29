@@ -35,22 +35,23 @@ input, textarea {
 
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-
+  font-size: 20px !important;
 
   color: #5A5A57;
-  padding-left: 15px;
+  padding-left: 15px;  
 }
 
 textarea {
   height: 115px;
+  padding-top: 15px;
 }
 
 label {
-  margin-top: 20px;
+  margin-top: 10px;
+  font-size: 16px;
 }
 
-button {
+.submit {
   width: 320px;
   height: 43px;
   border: none;
@@ -61,7 +62,7 @@ button {
 
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
 
 
   color: #FFFFFF;
@@ -73,7 +74,16 @@ button {
 }
 
 .primary-map {
-  border:0; width: 620px; height: 210px
+  border:0; width: 620px; height: 190px
+}
+
+.sub-title {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.par {
+  font-size: 18px;
 }
 
 @media screen and (max-width: 1200px) {

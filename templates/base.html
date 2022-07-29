@@ -1,50 +1,52 @@
 {% load static %}
+{% load compress %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
+		<style>
+			html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}small{font-size:80%}img{border:0}button,input{margin:0;font:inherit;color:inherit}button{overflow:visible}button{text-transform:none}button,input[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}input{line-height:normal}fieldset{padding:.35em .625em .75em;margin:0 2px;border:1px solid silver}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}:before,:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input,button{font-family:inherit;font-size:inherit;line-height:inherit}img{vertical-align:middle}small{font-size:85%}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.row{margin-right:-15px;margin-left:-15px}.col-md-4{position:relative;min-height:1px;padding-right:15px;padding-left:15px}fieldset{min-width:0;padding:0;margin:0;border:0}.form-control{display:block;width:100%;height:34px;padding:6px 12px;font-size:14px;line-height:1.42857143;color:#555;background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.form-control::-moz-placeholder{color:#999;opacity:1}.form-control:-ms-input-placeholder{color:#999}.form-control::-webkit-input-placeholder{color:#999}.form-group{margin-bottom:15px}.btn{display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;background-image:none;border:1px solid transparent;border-radius:4px}.btn-default{color:#333;background-color:#fff;border-color:#ccc}.panel{margin-bottom:20px;background-color:#fff;border:1px solid transparent;border-radius:4px;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);box-shadow:0 1px 1px rgba(0,0,0,.05)}.panel-body{padding:15px}.panel-heading{padding:10px 15px;border-bottom:1px solid transparent;border-top-left-radius:3px;border-top-right-radius:3px}.panel-default{border-color:#ddd}.panel-default>.panel-heading{color:#333;background-color:#f5f5f5;border-color:#ddd}.container:before,.container:after,.row:before,.row:after,.panel-body:before,.panel-body:after{display:table;content:" "}.container:after,.row:after,.panel-body:after{clear:both}@-ms-viewport{width:device-width}body{overflow-y:scroll}.right{float:right}.formbutton-default{padding:6px 10px;border-bottom-style:solid;border-bottom-width:2px;font-size:12px;font-weight:700}html,body{height:100%}body{background:#f2f5f7;color:#3c444b}.formbutton-default{background:linear-gradient(to bottom,white,#eef0f2);border-bottom-color:#ccc;color:#3c444b}
+		</style>
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'base/base.css' %}" />
+		<meta name='viewport' content='initial-scale=1, viewport-fit=cover'>
+    
+
+		{% block head %}
+		<title>ADD A BLOCK</title>
+		{% endblock %}
+  </head>
+  <body class="">
+		<link
+		href="https://fonts.googleapis.com/css2?family=Martel&display=swap"
+		rel="stylesheet"
+		/>
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Istok+Web:400,700&display=swap" rel="stylesheet" type="text/css" />
+
+		{% compress css %}
+		<link rel="stylesheet" href="{% static 'base/base.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap"
-      rel="stylesheet"
-    /> -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Martel&display=swap"
-      rel="stylesheet"
-    />
+		<link rel="stylesheet" href="{% static 'home/css/bootstrap.css' %}" type="text/css" />
+		<link rel="stylesheet" href="{% static 'home/style.css' %}" type="text/css" />
 
-    <!-- Stylesheets
-	============================================= -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Istok+Web:400,700&display=swap" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="{% static 'home/css/bootstrap.css' %}" type="text/css" />
-	<link rel="stylesheet" href="{% static 'home/style.css' %}" type="text/css" />
+		<link rel="stylesheet" href="{% static 'home/css/dark.css' %}" type="text/css" />
+		<link rel="stylesheet" href="{% static 'home/css/font-icons.css' %}" type="text/css" />
+		<link rel="stylesheet" href="{% static 'home/css/animate.css' %}" type="text/css" />
+		<link rel="stylesheet" href="{% static 'home/css/magnific-popup.css' %}" type="text/css" />
 
-	<link rel="stylesheet" href="{% static 'home/css/dark.css' %}" type="text/css" />
-	<link rel="stylesheet" href="{% static 'home/css/font-icons.css' %}" type="text/css" />
-	<link rel="stylesheet" href="{% static 'home/css/animate.css' %}" type="text/css" />
-	<link rel="stylesheet" href="{% static 'home/css/magnific-popup.css' %}" type="text/css" />
+		<link rel="stylesheet" href="{% static 'home/css/components/ion.rangeslider.css' %}" type="text/css" />
 
-	<link rel="stylesheet" href="{% static 'home/css/components/ion.rangeslider.css' %}" type="text/css" />
+		<link rel="stylesheet" href="{% static 'home/css/custom.css' %}" type="text/css" />
 
-	<link rel="stylesheet" href="{% static 'home/css/custom.css' %}" type="text/css" />
-	<meta name='viewport' content='initial-scale=1, viewport-fit=cover'>
+		<link rel="stylesheet" href="{% static 'home/demos/hosting/css/fonts.css' %}" type="text/css" />
+		<link rel="stylesheet" href="{% static 'home/demos/hosting/hosting.css' %}" type="text/css" />
+		{% endcompress %}
+		<!-- <link rel="stylesheet" href="{% static 'home/css/colors.php?color=44aaac' %}" type="text/css" /> -->
 
-	<!-- Hosting Demo Specific Stylesheet -->
-	<link rel="stylesheet" href="{% static 'home/css/colors.php?color=44aaac' %}" type="text/css" /> <!-- Theme Color -->
-	<link rel="stylesheet" href="{% static 'home/demos/hosting/css/fonts.css' %}" type="text/css" />
-	<link rel="stylesheet" href="{% static 'home/demos/hosting/hosting.css' %}" type="text/css" />
-	<!-- / -->
-
-    {% block head %}
-    <title>ADD A BLOCK</title>
-    {% endblock %}
-  </head>
-  <body class="">
     <div class="base-container">
       <!-- Header
 		============================================= -->
@@ -56,8 +58,8 @@
 						<!-- Logo
 						============================================= -->
 						<div id="logo">
-							<a href="index.html" class="standard-logo" data-dark-logo="{% static 'home/images/logo-dark.svg' %}"><img width="180px" src="{% static 'home/images/logo-dark.svg' %}"></a>
-							<a href="index.html" class="retina-logo" data-dark-logo="{% static 'home/images/logo-dark@2x.svg' %}"><img src="{% static 'home/images/logo-dark@2x.svg' %}"></a>
+							<a href="{% url 'index' %}" class="standard-logo" data-dark-logo="{% static 'home/images/logo-dark.svg' %}"><img width="180px" src="{% static 'home/images/logo-dark.svg' %}" alt="logo"></a>
+							<a href="{% url 'index' %}" class="retina-logo" data-dark-logo="{% static 'home/images/logo-dark@2x.svg' %}"><img src="{% static 'home/images/logo-dark@2x.svg' %}" alt="logo"></a>
 						</div><!-- #logo end -->
 
 						
@@ -71,10 +73,10 @@
 						<nav class="primary-menu not-dark with-arrows">
 
 							<ul class="menu-container not-dark">
-								<li class="menu-item current"><a class="menu-link" href="{% url 'index' %}"><div>Home</div></a></li>
+								<li class="menu-item current"><a style="font-size: 14px;" class="menu-link" href="{% url 'index' %}"><div>Home</div></a></li>
 								
-								<li class="menu-item"><a class="menu-link" href="{% url 'project' %}"><div>Portfolio</div></a></li>
-								<li class="menu-item"><a class="menu-link" href="{% url 'contact' %}"><div>Contact</div></a></li>
+								<li class="menu-item"><a style="font-size: 14px;" class="menu-link" href="{% url 'project' %}"><div>Portfolio</div></a></li>
+								<li class="menu-item"><a style="font-size: 14px;" class="menu-link" href="{% url 'contact' %}"><div>Contact</div></a></li>
 							</ul>
 
 						</nav><!-- #primary-menu end -->
@@ -106,16 +108,16 @@
 
                   <h4>About Canvas</h4>
 
-                  <p>We believe in Simple, Creative &amp; Flexible Design Standards.</p>
+                  <p style="font-size: 16px;">We believe in Simple, Creative &amp; Flexible Design Standards.</p>
 
-                  <div style="background: url('images/world-map.png') no-repeat left center; background-size: auto 100%;">
-                    <address>
+                  <div>
+                    <address style="font-size: 16px;">
                       <strong>Office:</strong><br>
                       795 Folsom Ave, Suite 600<br>
                       San Francisco, CA 94107<br>
                     </address>
-                    <abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br>
-                    <abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
+                    <abbr style="font-size: 16px;" title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br>
+                    <abbr style="font-size: 16px;" title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
                   </div>
 
                 </div>
@@ -185,20 +187,17 @@
       </footer><!-- #footer end -->
     </div>
 
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-    <script src="{% static 'base/base.js' %}"></script>
+	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+	
+	<script type="text/javascript" src="{% static 'base/base.js' %}"></script>
 
-    <!-- JavaScripts
-	============================================= -->
-	<script src="{% static 'home/js/jquery.js' %}"></script>
-	<script src="{% static 'home/js/plugins.min.js' %}"></script>
+	{% compress js %}
+	<script type="text/javascript" src="{% static 'home/js/jquery.js' %}"></script>
+	<script type="text/javascript" src="{% static 'home/js/jquery.hotspot.js' %}"></script>
+	<script type="text/javascript" src="{% static 'home/js/plugins.min.js' %}"></script>
 
-	<script src="{% static 'home/js/jquery.hotspot.js' %}"></script>
-	<!-- <script src="{% static 'home/js/components/rangeslider.min.js' %}"></script> -->
-
-	<!-- Footer Scripts
-	============================================= -->
-	<script src="{% static 'home/js/functions.js' %}"></script>
+	<script type="text/javascript" src="{% static 'home/js/functions.js' %}"></script>
+	{% endcompress %}
 
 	<script>
 		jQuery(document).ready( function() {
