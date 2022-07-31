@@ -36,9 +36,9 @@ SECRET_KEY = get_secret("SECRET_KEY")
 GOOGLE_RECAPTCHA_SECRET_KEY = get_secret("CAPTCHA_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['178.79.181.34']
+ALLOWED_HOSTS = ['178.79.181.34', 'www.acewebdesigns.co.uk']
 
 
 # Application definition
