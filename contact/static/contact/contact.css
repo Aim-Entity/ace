@@ -46,6 +46,13 @@ textarea {
   padding-top: 15px;
 }
 
+.g-recaptcha {
+  margin-top: 15px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 label {
   margin-top: 10px;
   font-size: 16px;
